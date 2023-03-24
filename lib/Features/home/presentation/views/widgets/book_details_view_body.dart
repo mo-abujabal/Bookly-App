@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:go_router/go_router.dart';
 
+import 'book_rating.dart';
 import 'custom_book_details_app_bar.dart';
 import 'custem_book_item.dart';
 
@@ -38,7 +39,13 @@ class BookDetailsViewBody extends StatelessWidget {
             child: Text('Rudyard Kipling',
                 style:
                     Styles.textStyle18.copyWith(fontStyle: FontStyle.italic)),
-          )
+          ),
+          const SizedBox(
+            height: 18,
+          ),
+          const BookRating(
+            mainAxisAlignment: MainAxisAlignment.center,
+          ),
         ],
       ),
     );
