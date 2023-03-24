@@ -7,12 +7,13 @@ abstract class Styles {
   );
   static const textStyle20 = TextStyle(
     fontSize: 24,
-    fontWeight: FontWeight.normal,
+    fontWeight: FontWeight.w500,
     fontFamily: 'Unna',
   );
   static const textStyle30 = TextStyle(
-    fontSize: 30,
-    fontWeight: FontWeight.normal,
+    fontSize: 36,
+    fontFamily: 'Unna',
+    fontWeight: FontWeight.w500,
   );
   static const textStyle16 = TextStyle(
     fontSize: 16,

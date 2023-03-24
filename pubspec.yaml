@@ -65,7 +65,7 @@ flutter:
   fonts:
     - family: Unna
       fonts:
-        - asset: assets/fonts/Unna-Bold.ttf
+        - asset: assets/fonts/Unna-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
