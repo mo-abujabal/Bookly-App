@@ -4,7 +4,9 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../../../core/widgets/custom_button.dart';
 import 'book_rating.dart';
+import 'books_action.dart';
 import 'custom_book_details_app_bar.dart';
 import 'custem_book_item.dart';
 
@@ -45,6 +47,13 @@ class BookDetailsViewBody extends StatelessWidget {
           ),
           const BookRating(
             mainAxisAlignment: MainAxisAlignment.center,
+          ),
+          const Padding(
+            padding: EdgeInsets.symmetric(
+              vertical: 37,
+              horizontal: 8,
+            ),
+            child: BooksAction(),
           ),
         ],
       ),
