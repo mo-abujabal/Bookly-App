@@ -1,3 +1,4 @@
+import 'package:bookly_app/Features/home/presentation/views/widgets/similar_books_list_view.dart';
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -55,6 +56,17 @@ class BookDetailsViewBody extends StatelessWidget {
             ),
             child: BooksAction(),
           ),
+          const Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'You can also like',
+              style: Styles.textStyle14,
+            ),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          const SimilarBooksListView(),
         ],
       ),
     );
