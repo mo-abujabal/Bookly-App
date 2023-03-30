@@ -11,7 +11,7 @@ class CustemBookImage extends StatelessWidget {
       aspectRatio: 2.4 / 4,
       child: Container(
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.circular(10),
             image: const DecorationImage(
               fit: BoxFit.fill,
               image: AssetImage(AssetsData.itemImage),
