@@ -6,7 +6,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../../../../core/utils/assets.dart';
 import '../../../../../core/utils/styles.dart';
 import 'best_seller_list_view.dart';
-import 'best_seller_list_view_item.dart';
+import 'book_list_view_item.dart';
 import 'custom_app_bar.dart';
 import 'custem_book_item.dart';
 import 'featured_list_view.dart';
