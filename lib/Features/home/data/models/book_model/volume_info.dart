@@ -133,3 +133,4 @@ class VolumeInfo extends Equatable {
     ];
   }
 }
+  
