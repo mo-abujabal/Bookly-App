@@ -3,8 +3,8 @@ import 'package:flutter/cupertino.dart';
 import '../../../../../core/utils/assets.dart';
 
 class CustemBookImage extends StatelessWidget {
-  const CustemBookImage({super.key});
-
+  const CustemBookImage({super.key, required this.imageUrl});
+  final String imageUrl;
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
@@ -12,9 +12,9 @@ class CustemBookImage extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            image: const DecorationImage(
+            image:  DecorationImage(
               fit: BoxFit.fill,
-              image: AssetImage(AssetsData.itemImage),
+              image:NetworkImage(imageUrl)
             )),
       ),
     );
