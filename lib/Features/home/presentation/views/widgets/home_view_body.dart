@@ -5,7 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../../core/utils/assets.dart';
 import '../../../../../core/utils/styles.dart';
-import 'best_seller_list_view.dart';
+import 'newset_books_list_view.dart';
 import 'book_list_view_item.dart';
 import 'custom_app_bar.dart';
 import 'custem_book_item.dart';
@@ -16,7 +16,7 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(slivers: [
+    return CustomScrollView(physics: const BouncingScrollPhysics(), slivers: [
       SliverToBoxAdapter(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -40,7 +40,7 @@ class HomeViewBody extends StatelessWidget {
         ),
       ),
       const SliverFillRemaining(
-        child: BestSellerListView(),
+        child: NewsetBooksListView(),
       )
     ]);
   }

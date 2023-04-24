@@ -1,15 +1,17 @@
+import 'package:bookly_app/Features/home/presentation/views/widgets/custem_book_item.dart';
 import 'package:bookly_app/core/utils/app_router.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/assets.dart';
 import '../../../../../core/utils/styles.dart';
+import '../../../data/models/book_model/book_model.dart';
 import 'book_rating.dart';
 import 'home_view_body.dart';
 
 class BookListViewItem extends StatelessWidget {
-  const BookListViewItem({super.key});
-
+  const BookListViewItem({super.key, required this.bookMode});
+  final BookModel bookMode;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -22,17 +24,8 @@ class BookListViewItem extends StatelessWidget {
           height: 130,
           child: Row(
             children: [
-              AspectRatio(
-                aspectRatio: 2.4 / 4,
-                child: Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      image: const DecorationImage(
-                        fit: BoxFit.fill,
-                        image: AssetImage(AssetsData.itemImage),
-                      )),
-                ),
-              ),
+              CustemBookImage(
+                  imageUrl: bookMode.volumeInfo.imageLinks.smallThumbnail),
               const SizedBox(
                 width: 30,
               ),
@@ -44,25 +37,25 @@ class BookListViewItem extends StatelessWidget {
                       padding: const EdgeInsets.only(top: 12, bottom: 6),
                       child: SizedBox(
                         width: MediaQuery.of(context).size.width * .6,
-                        child: const Text(
-                          'Harry Potter and the Goblet of Fire',
+                        child: Text(
+                          bookMode.volumeInfo.title!,
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                           style: Styles.textStyle20,
                         ),
                       ),
                     ),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(vertical: 1),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 1),
                       child: Text(
-                        'J.K. Rowling',
+                        bookMode.volumeInfo.authors![0],
                         style: Styles.textStyle16,
                       ),
                     ),
                     Row(
                       children: const [
                         Text(
-                          '19.99 €',
+                          'Free',
                           style: Styles.textStyle20,
                         ),
                         Spacer(),
